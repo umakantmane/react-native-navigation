@@ -1,0 +1,52 @@
+React Native Navigation:
+
+1. npm install react-navigation --save
+2. Navigation config:
+    
+    createStackNavigator
+    createAppContainer
+
+    const appCon = createStackNavigator({
+        'RouteName1':'ComponentName1',
+        'RouteName1':'ComponentName2',
+        'RouteName N':'ComponentName N'
+    },
+    {
+        initialRouteName:'ComponentName'
+    }
+
+    )
+
+    const app = createAppContainer(appCon);
+    
+3. Navigation Methods:
+    
+    this.props.navigation.navigate('RouteName')
+    this.props.navigation.push('RouteName')
+    this.props.navigation.goBack()
+    this.props.navigation.popToTop()
+
+4. Passing params vai navigation functions
+
+   this.props.navigation.navigate('RouteName', {username:"Manas", email:"manas@gmail.com"})
+
+5. Receiving Navigation params:
+   
+   this.props.navigation.getParam("keyName")
+
+6. navigationOptions:
+
+    navigationOptions= {
+
+        headerLeft:(),
+        headerRight(),
+        title:"XXXXXX",
+        headerStyle: {
+          backgroundColor: 'purple',
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+        }
+
+    }
